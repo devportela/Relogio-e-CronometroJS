@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relógio e Cronômetro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app">
+    <h1>Relógio e Cronômetro</h1>
+
+    <div class="tabs">
+      <button onclick="showTab('clock')" class="tab-button active">Relógio</button>
+      <button onclick="showTab('stopwatch')" class="tab-button">Cronômetro</button>
+      <button onclick="showTab('timer')" class="tab-button">Temporizador</button>
+    </div>
+
+    <div id="clock" class="tab-content">
+      <div class="display" id="currentTime">00:00:00</div>
+    </div>
+
+    <div id="stopwatch" class="tab-content hidden">
+      <div class="display" id="stopwatchDisplay">00:00:00</div>
+      <div class="controls">
+        <button onclick="startStopwatch()">Iniciar</button>
+        <button onclick="pauseStopwatch()">Pausar</button>
+        <button onclick="resetStopwatch()">Zerar</button>
+      </div>
+    </div>
+
+    <div id="timer" class="tab-content hidden">
+      <input type="number" id="minutesInput" placeholder="Minutos" min="1" />
+      <div class="display" id="timerDisplay">00:00</div>
+      <div class="controls">
+        <button onclick="startTimer()">Iniciar</button>
+        <button onclick="resetTimer()">Resetar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
