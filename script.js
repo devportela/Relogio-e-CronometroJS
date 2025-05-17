@@ -90,11 +90,10 @@ function showTab(id) {
     tab.classList.add('hidden');
   });
 
-  // Mostra apenas o conteúdo selecionado
+
   const selectedTab = document.getElementById(id);
   if (selectedTab) selectedTab.classList.remove('hidden');
 
-  // Atualiza os botões para mostrar qual aba está ativa
   document.querySelectorAll('.tab-button').forEach(btn => {
     btn.classList.remove('active');
     if (btn.textContent.toLowerCase().includes(id)) {
